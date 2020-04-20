@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/limonlayout"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:padding="@dimen/activity_vertical_margin"
     android:orientation="vertical">
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/avatar"
         android:layout_width="match_parent"
-        android:layout_height="150dp" />
+        android:layout_height="150dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginBottom="10dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
+
     <TextView
         android:layout_gravity="center"
         android:elevation="2dp"
@@ -55,14 +60,22 @@
         android:layout_gravity="center"
         android:paddingLeft="5dp"
         android:paddingTop="16dp" />
-    <Button
+    <com.skydoves.elasticviews.ElasticButton
         android:id="@+id/btn_perfil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:text="PERFIL"
+        android:background="@color/limon"
+        android:layout_below="@+id/text_input_layout_user"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        app:button_cornerRadius="4dp"
         android:layout_marginBottom="20dp"
-        android:padding="15dp"
-        android:text="Ver Perfil"/>
+        app:button_duration="250"
+        android:padding="20dp"
+        app:button_scale="0.87"
+        />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/repos_recycler_view"
