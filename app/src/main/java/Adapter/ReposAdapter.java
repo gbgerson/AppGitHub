@@ -1,9 +1,12 @@
 package Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,6 +20,7 @@ public class ReposAdapter extends RecyclerView.Adapter<ReposAdapter.ReposViewHol
     private List<GitHubRepo> repos;
     private int rowLayout;
     private Context context;
+
 
     public ReposAdapter(List<GitHubRepo> repos, int rowLayout, Context context) {
         this.setRepos(repos);
@@ -41,6 +45,7 @@ public class ReposAdapter extends RecyclerView.Adapter<ReposAdapter.ReposViewHol
         TextView repoName;
         TextView repoDescription;
         TextView repolanguage;
+        Button repo;
 
 
         public ReposViewHolder(View v) {
@@ -50,7 +55,11 @@ public class ReposAdapter extends RecyclerView.Adapter<ReposAdapter.ReposViewHol
             repoDescription = (TextView) v.findViewById(R.id.repoDescription);
             repolanguage = (TextView) v.findViewById(R.id.repoLanguage);
 
+
+
+
         }
+
     }
 
     @Override

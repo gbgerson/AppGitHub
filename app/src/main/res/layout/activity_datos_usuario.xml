@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/limonlayout"
+    android:background="@color/negro"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:padding="@dimen/activity_vertical_margin"
-    android:orientation="vertical">
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="10dp"
+    android:orientation="vertical"
+    >
+    <com.github.glomadrian.grav.GravView
+        android:id="@+id/grav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:colorGenerator="com.github.glomadrian.grav.generator.paint.ArrayColorGenerator"
+        app:array_colors="@array/falcon"
+        app:pointGenerator="com.github.glomadrian.grav.generator.point.RegularPointGenerator"
+        app:regular_cell_size="100"
+        app:regular_variance="200"
+        app:gravGenerator="com.github.glomadrian.grav.generator.grav.RectangleGenerator"
+        app:rectangle_width="15dp"
+        app:rectangle_height="2dp"
+        app:animationGenerators="@array/FalconAnimations"
+        app:side_to_side_min_duration="1000"
+        app:side_to_side_max_duration="1000"
+        app:side_to_side_direction="rightToLeft"
+        app:shake_variance="5dp"
+        app:shake_direction="vertical"
+        />
     <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginTop="10dp"
         android:id="@+id/avatar"
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -16,14 +41,21 @@
         app:civ_border_color="#FF000000"/>
 
     <TextView
+        android:layout_below="@+id/avatar"
         android:layout_gravity="center"
         android:elevation="2dp"
+        android:textColor="@color/rojo"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:id="@+id/username"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@android:style/TextAppearance"/>
     <TextView
+        android:textColor="@color/rojo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/username"
         android:elevation="2dp"
         android:layout_gravity="center"
         android:id="@+id/logIn"
@@ -31,6 +63,9 @@
         android:layout_height="wrap_content"
         style="@android:style/TextAppearance"/>
     <TextView
+        android:textColor="@color/rojo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logIn"
         android:elevation="2dp"
         android:layout_gravity="center"
         android:id="@+id/followers"
@@ -38,6 +73,9 @@
         android:layout_height="wrap_content"
         style="@android:style/TextAppearance"/>
     <TextView
+        android:textColor="@color/rojo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/followers"
         android:elevation="2dp"
         android:id="@+id/following"
         android:layout_gravity="center"
@@ -45,6 +83,9 @@
         android:layout_height="wrap_content"
         style="@android:style/TextAppearance"/>
     <TextView
+        android:textColor="@color/rojo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/following"
         android:elevation="2dp"
         android:layout_gravity="center"
         android:id="@+id/email"
@@ -52,6 +93,9 @@
         android:layout_height="wrap_content"
         style="@android:style/TextAppearance"/>
     <TextView
+        android:textColor="@color/rojo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/email"
         android:elevation="2dp"
         android:id="@+id/userNameTV"
         style="@style/TextAppearance"
@@ -65,24 +109,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="PERFIL"
-        android:background="@color/limon"
-        android:layout_below="@+id/text_input_layout_user"
-        android:layout_marginTop="20dp"
-        android:textSize="15sp"
-        app:button_cornerRadius="4dp"
-        android:layout_marginBottom="20dp"
+        android:background="#F4451E"
+        android:layout_below="@+id/userNameTV"
+        android:layout_marginTop="5dp"
+        android:textColor="#5EF706"
+        android:textSize="18sp"
+        app:button_cornerRadius="12dp"
+        android:layout_marginBottom="5dp"
         app:button_duration="250"
-        android:padding="20dp"
+        android:padding="10dp"
         app:button_scale="0.87"
         />
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/btn_perfil"
         android:id="@+id/repos_recycler_view"
+        app:button_cornerRadius="12dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="8dp"
-        android:background="@color/limoncirculo"
+        android:background="#0E0D0D"
         android:padding="16dp" />
 
-</LinearLayout>
+</RelativeLayout>

@@ -4,11 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/negro"
     android:paddingBottom="16dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="10dp"
     tools:context=".MainActivity">
+
+    <com.github.glomadrian.grav.GravView
+        android:id="@+id/grav"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:colorGenerator="com.github.glomadrian.grav.generator.paint.ArrayColorGenerator"
+        app:array_colors="@array/red"
+        app:pointGenerator="com.github.glomadrian.grav.generator.point.RegularPointGenerator"
+        app:regular_cell_size="150"
+        app:regular_variance="100"
+        app:gravGenerator="com.github.glomadrian.grav.generator.grav.BallGenerator"
+        app:ball_size_from_size="3dp"
+        app:ball_size_to_size="6dp"
+        app:animationGenerators="@array/path"
+        app:path_variance_from="-10dp"
+        app:path_variance_to="12dp"
+        app:path="@string/circle"
+        app:path_original_width="@integer/circle_original_width"
+        app:path_original_height="@integer/circle_original_height"
+        app:path_min_duration="5000"
+        app:path_max_duration="6000"
+        />
+
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imagen"
         android:layout_width="match_parent"
@@ -24,11 +50,15 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_user"
         android:layout_width="match_parent"
+        android:textStyle="italic"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imagen"
+        android:textColorHint="#067BF7"
         android:hint="Escriba el nombre del usuario">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_username"
+            android:textColor="#067BF7"
+            android:textStyle="italic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -38,21 +68,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CONSULTAR"
-        android:background="@color/limon"
+        android:textStyle="italic"
+        android:textColor="#5EF706"
+        android:background="#F4451E"
         android:layout_below="@+id/text_input_layout_user"
         android:layout_marginTop="20dp"
-        android:textSize="15sp"
-        app:button_cornerRadius="4dp"
+        android:textSize="18sp"
+        app:button_cornerRadius="10dp"
         android:layout_marginBottom="20dp"
         app:button_duration="250"
         android:padding="20dp"
         app:button_scale="0.87"
         />
-
-
-
-
-
 
 
 

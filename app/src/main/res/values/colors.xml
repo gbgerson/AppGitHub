@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimary">#d83c2a</color>
+    <color name="colorPrimaryDark">#992600</color>
     <color name="colorAccent">#03DAC5</color>
 
     <!---Agregaremos colores para darle una mejor vista a nuestra app -->
     <color name="limoncirculo">#cae9a6</color>
-    <color name="limonlayout">#e0f3c9</color>
+    <color name="limonlayout">#E7A296</color>
     <color name="rojo">#d83c2a</color>
     <color name="rojooscuro">#992600</color>
     <color name="azuloscuro">#003366</color>
     <color name="limon">#8BF906</color>
+    <color name="negro">#1B1C19</color>
 
 </resources>
